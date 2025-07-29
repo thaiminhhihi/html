@@ -1,100 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" class="css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fashion NFT Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      border-bottom: 1px solid #eee;
+    }
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+    .actions button {
+      margin-left: 10px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      background: black;
+      color: white;
+      cursor: pointer;
+    }
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 10%;
+    }
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    .hero-text button {
+      margin-right: 10px;
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: none;
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+    .hero img {
+      width: 400px;
+      border-radius: 10px;
+    }
+    .featured {
+      padding: 40px 10%;
+    }
+    .featured h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .featured p {
+      margin-bottom: 20px;
+      color: #666;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .card .author {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .card button {
+      padding: 6px 12px;
+      border: none;
+      background: #000;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .steps {
+      display: flex;
+      justify-content: space-around;
+      padding: 40px 10%;
+      background: #f9f9f9;
+    }
+    .step {
+      width: 22%;
+      text-align: center;
+    }
+    .step h4 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    footer {
+      padding: 30px 10%;
+      background: #000;
+      color: #fff;
+      font-size: 14px;
+    }
+  </style>
 </head>
-
 <body>
-    <div class="form">
-        <div class="left">
-            <div class="img">
-                <img src="/3542.avif" alt="Image">
-            </div>
-        </div>
-        <div class="right">
-            <div class="container">
-                <div class="text">
-                    <h1>Let’s level up your brand, together</h1>
-                    <h3>You can reach us anytime via
-                        <a href="mailto:hi@untitledui.com" class="mail">hi@untitledui.com</a>
-                    </h3>
-                    <form>
-                        <!-- 1 -->
-                        <div class="form-item">
-                            <div class="form-text">
-                                <label for="name">Name</label>
-                                <div class="form-input">
-                                    <input type="text" id="name" name="name" placeholder=" Enter your name" required>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 2 -->
-                        <div class="form-item">
-                            <div class="form-text">
-                                <label for="email">Email</label>
-                            </div>
-                            <div class="form-input">
-                                <input type="email" id="email" name="email" placeholder=" You@company.com" required>
-                            </div>
-                        </div>
-                        <!-- 3 -->
-                        <div class="form-item">
-                            <div class="form-text">
-                                <label for="phone-number">Phone Number</label>
-                            </div>
-                            <div class="form-input">
-
-                                <select name="phone-number-region" id="phone-number-region">
-                                    <option value="+1">United States (+1)</option>
-                                    <option value="+44">United Kingdom (+44)</option>
-                                    <option value="+61">Australia (+61)</option>
-                                </select>
-                                <input type="tel" id="phone-number" name="phone-number"
-                                    placeholder=" Enter your phone number" required>
-                            </div>
-                        </div>
-                        <!-- 4 -->
-                        <div class="form-item">
-                            <div class="form-text">
-                                <label for="help">How can we help?
-                                </label>
-                            </div>
-                            <div class="form-input">
-                                <textarea id="help" name="help" 
-                                    placeholder=" Tell us little about your project..." required></textarea>
-                            </div>
-                        </div>
-                        <!-- 5 -->
-                        <div class="form-item">
-                            <div class="form-text">
-                                <label> Services</label>
-                            </div>
-
-                            <div class="checkbox-container">
-                                <label><input type="checkbox"> Website Design</label>
-                                <label><input type="checkbox"> Content Creation</label>
-                                <label><input type="checkbox"> UX Design</label>
-                                <label><input type="checkbox"> Strategy & consulting</label>
-                                <label><input type="checkbox"> User research</label>
-                                <label><input type="checkbox"> Other</label>
-                            </div>
-                        </div>
-
-                </div>
-            </div>
-            <button class="submit">Get Started</button>
-
-            </form>
-        </div>
+  <header>
+    <div class="logo"><strong>🧵 Studio</strong></div>
+    <nav>
+      <a href="#">Studio</a>
+      <a href="#">Client</a>
+      <a href="#">Explore</a>
+    </nav>
+    <div class="actions">
+      <button>Login</button>
+      <button>View Wallet</button>
     </div>
+  </header>
 
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Transform The World</h1>
+      <p>Check out the most premium, unique and exclusive NFTs</p>
+      <button>Get Started</button>
+      <button style="background: transparent; color: black; border: 1px solid black;">Learn More</button>
     </div>
+    <img src="https://source.unsplash.com/random/400x500?fashion" alt="Fashion" />
+  </section>
+
+  <section class="featured">
+    <h2>Featured Collections</h2>
+    <p>Explore limited-edition collections shipping with artwork, layers and modern marvels.</p>
+    <div class="cards">
+      <!-- Card demo -->
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x250?clothes1" alt="Collection">
+        <div class="author">@creator</div>
+        <button>View Collection</button>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x250?clothes2" alt="Collection">
+        <div class="author">@creator</div>
+        <button>View Collection</button>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x250?clothes3" alt="Collection">
+        <div class="author">@creator</div>
+        <button>View Collection</button>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x250?clothes4" alt="Collection">
+        <div class="author">@creator</div>
+        <button>View Collection</button>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x250?clothes5" alt="Collection">
+        <div class="author">@creator</div>
+        <button>View Collection</button>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x250?clothes6" alt="Collection">
+        <div class="author">@creator</div>
+        <button>View Collection</button>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x250?clothes7" alt="Collection">
+        <div class="author">@creator</div>
+        <button>View Collection</button>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/200x250?clothes8" alt="Collection">
+        <div class="author">@creator</div>
+        <button>View Collection</button>
+      </div>
     </div>
+  </section>
+
+  <section class="steps">
+    <div class="step">
+      <h4>Set Up Your Wallet</h4>
+      <p>Connect your crypto wallet to get started.</p>
+    </div>
+    <div class="step">
+      <h4>Create Your Collection</h4>
+      <p>Build and style your collection for the world to see.</p>
+    </div>
+    <div class="step">
+      <h4>Add Your NFTs</h4>
+      <p>Upload your work and mint your tokens.</p>
+    </div>
+    <div class="step">
+      <h4>List Them For Sale</h4>
+      <p>Choose price and put them up for sale in minutes.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Platform: Web | Note: This is a prototype landing page. All images are for demo purposes only.</p>
+    <p>Ready for action: <strong>hello@defy.io</strong></p>
+  </footer>
 </body>
-
 </html>
